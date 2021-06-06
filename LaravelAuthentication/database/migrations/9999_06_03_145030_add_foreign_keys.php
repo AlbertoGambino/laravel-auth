@@ -19,16 +19,19 @@ class AddForeignKeys extends Migration
                    -> references('id')
                    -> on('brands');
 
+
         });
         Schema::table('car_pilot', function (Blueprint $table){
 
             $table -> foreign('car_id', 'pilotcar')
                    -> references('id')
-                   -> on('cars');
+                   -> on('cars')
+                   -> onDelete('cascade');
 
             $table -> foreign('pilot_id', 'carpilot')
                    -> references('id')
-                   -> on('pilots');
+                   -> on('pilots')
+                   -> onDelete('cascade');
 
 
         });

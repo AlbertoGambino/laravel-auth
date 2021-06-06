@@ -51,7 +51,7 @@
 
                     @foreach ($car -> pilots as $carPilot)
 
-                        @if ($carpilot -> id == $pilot -> id)
+                        @if ($carPilot -> id == $pilot -> id)
 
                             selected
 

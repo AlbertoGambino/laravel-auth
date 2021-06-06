@@ -16,6 +16,12 @@
 
                     {{$car -> brand -> name}} <br>
 
+                    <a href="{{route('car-delete', $car -> id)}}">
+
+                        &#10060;
+
+                    </a>
+
                     <a href="{{route('car-edit', $car -> id)}}">
 
                         &#9998;
@@ -42,7 +48,7 @@
 
                     </ul>
 
-                    @endauth
+                    {{-- @endauth --}}
 
                 </li>
 

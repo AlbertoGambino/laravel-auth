@@ -12,7 +12,9 @@ class GuestController extends Controller
 {
     public function home(){
 
-        $cars = Car::all();
+        /* $cars = Car::all(); */
+
+        $cars = Car::where('deleted', false) -> get();
 
         return view('pages.home', compact('cars'));
     }

@@ -49,4 +49,17 @@ class LoggedController extends Controller
         return redirect() -> route('home');
     }
 
+    public function delete($id){
+
+
+            $car = Car::findOrFail($id);
+
+            $car -> deleted = true;
+            $car -> save();
+
+           /*  $car -> delete(); */
+
+            return redirect() -> route('home');
+    }
+
 }
