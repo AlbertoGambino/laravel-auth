@@ -38,7 +38,7 @@ class LoggedController extends Controller
 
         $car = Car::findOrFail($id);
 
-        $car = update($validated);
+        $car -> update($validated);
 
         $brand = Brand::findOrFail($request -> brand_id);
         $car -> brand() -> associate($brand);

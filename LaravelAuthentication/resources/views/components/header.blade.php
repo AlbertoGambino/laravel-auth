@@ -57,9 +57,9 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        {{-- <main class="py-4">
             @yield('content')
-        </main>
+        </main> --}}
     </div>
 
 </header>
